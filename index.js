@@ -39,8 +39,9 @@ app.post('/add', function (request, response) {
   console.log(request.body);
   db.collection('post').insertOne(
     {
-      제목: request.body.title,
-      날짜: request.body.date,
+      이름: request.body.title,
+      비밀번호: request.body.date,
+      메세지: request.body.massage,
     },
     function () {
       response.redirect('/list');
